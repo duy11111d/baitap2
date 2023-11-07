@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css.css">
+
+</head>
+
+<body>
+    <div class="product">
+        <img src="product.png" alt="" class="main">
+        <div class="colorproduct">
+            <img src="1.png" alt="">
+            <img src="2.png" alt="">
+            <img src="3.png" alt="">
+            <img src="4.png" alt="">
+            <img src="5.png" alt="">
+        </div>
+    </div>
+    <div class="popupimage">
+        <div></div>
+        <img src="" alt="">
+    </div>
+    <script>
+        var colorslist = document.querySelectorAll(".product> .colorproduct> img")
+        for (var i = 0; i < colorslist.length; i++) {
+            colorslist[i].onmouseover = function () {
+                var mainImg = document.getElementsByTagName("img")[0];
+                mainImg.src = this.src;
+            }
+
+        }
+        var mainImg = document.getElementsByTagName("img")[0]
+        mainImg.onclick = function () {
+            var popup = document.querySelectorAll(".popupimage")[0];
+            popup.style.display = "block";
+            popup.getElementsByTagName("img")[0].src = this.src;
+            popup.getElementsByTagName("div")[0].onclick = function () {
+                popup.style.display = "none";
+            }
+
+        }
+    </script>
+</body>
+
+</html>

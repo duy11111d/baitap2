@@ -1,0 +1,45 @@
+.product {
+    width: 600px;
+    margin: 0 auto;
+}
+
+.product>.mainpicture {
+    width: 600px;
+    margin-bottom: 20px;
+}
+
+.product>.colorproduct {
+    text-align: center;
+}
+
+.product>.colorproduct>img {
+    width: 90px;
+    height: 90px;
+    border: 1px solid rgb(158, 153, 153);
+    margin: 10px;
+}
+
+.popupimage {
+    display: none;
+}
+
+.popupimage>div {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    opacity: 0.7;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+
+}
+
+.popupimage>img {
+    width: 70%;
+    position: fixed;
+    left: 15%;
+    z-index: 120;
+    top: 80px;
+    background-color: white;
+}
